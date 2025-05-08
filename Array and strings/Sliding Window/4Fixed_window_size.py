@@ -29,23 +29,44 @@
 
 # After we build the first window we initialize our answer to curr to consider the first window's sum.
 
-def fixed_window_max_subarray_sum(nums,k):
-    left  = 0
-    cur = 0
-    for right in range(k):
-        cur+=nums[right]
-    ans=cur
-    for i in range(k,len(nums)):
-        #1st its add nums[i] into cur sum value then from that sum value it minus the value of nums[i-k]
-        cur+=nums[i]-nums[i-k]
-        ans=max(ans,cur)
+# def fixed_window_max_subarray_sum(nums,k):
+#     left  = 0
+#     cur = 0
+#     for right in range(k):
+#         cur+=nums[right]
+#     ans=cur
+#     for i in range(k,len(nums)):
+#         #1st its add nums[i] into cur sum value then from that sum value it minus the value of nums[i-k]
+#         cur+=nums[i]-nums[i-k]
+#         ans=max(ans,cur)
 
-    return ans
+#     return ans
 
 
-def main():
-    nums=[3,-1,4,12,-8,5,6]
-    k=4
-    print("Max sum of the sub array: ",fixed_window_max_subarray_sum(nums,k))
+# def main():
+#     nums=[3,-1,4,12,-8,5,6]
+#     k=4
+#     print("Max sum of the sub array: ",fixed_window_max_subarray_sum(nums,k))
 
-main()
+# main()
+
+from typing import List
+
+class Solution:
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
+        cur = 0.0
+        for i in range(k):
+            cur += nums[i]
+
+        ans = cur / k
+
+        for i in range(k, len(nums)):
+            cur += nums[i] - nums[i - k]
+            b = cur / k
+            ans = max(ans, b)
+
+        return ans
+
+
+sol = Solution()
+print(sol.findMaxAverage([5], 1))  # Expected: 5.0
