@@ -19,24 +19,45 @@
 
 from typing import List
 
+# class Solution:
+#     def findMaxAverage(self, nums: List[int], k: int) -> float:
+#         cur = 0.0
+#         for i in range(k):
+#             cur += nums[i]
+
+#         ans = cur / k
+
+#         for i in range(k, len(nums)):
+#             cur += nums[i] - nums[i - k]
+#             b = cur / k
+#             ans = max(ans, b)
+
+#         return ans
+
+
+# sol = Solution()
+# print(sol.findMaxAverage([5], 1))  # Expected: 5.0
+
+
+
 class Solution:
-    def findMaxAverage(self, nums: List[int], k: int) -> float:
-        cur = 0.0
-        for i in range(k):
-            cur += nums[i]
-
-        ans = cur / k
-
-        for i in range(k, len(nums)):
-            cur += nums[i] - nums[i - k]
-            b = cur / k
-            ans = max(ans, b)
-
+    def longestOnes(self, nums: List[int], k: int) -> int:
+        left = ans = cur = 0
+        for right in range(len(nums)):
+            if nums[right]==0:
+                cur+=1
+                
+            while cur>k:
+                if nums[left]==0:
+                    cur-=1
+                left+=1
+            
+            ans=max(ans,right-left+1)
+        
         return ans
-
+    
 
 sol = Solution()
-print(sol.findMaxAverage([5], 1))  # Expected: 5.0
-
+print(sol.longestOnes([1,1,1,0,0,0,1,1,1,1,0], 1))
 
 
