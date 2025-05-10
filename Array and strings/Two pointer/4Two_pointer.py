@@ -16,7 +16,7 @@ def sub(s,t):
     return i == len(s)
 
 def main():
-    print(sub("ace","abcde"))
+    print(sub("axc","ahbgdc"))
 
 main()
     
