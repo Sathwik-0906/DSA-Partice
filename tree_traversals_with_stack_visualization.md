@@ -175,4 +175,60 @@ D E B F G C A
 | Postorder  | D E B F G C A  |
 
 ---
+# Understanding Inorder Traversal and Sorting
 
+## ✅ Inorder Traversal in Binary Search Tree (BST)
+
+If the tree is a **Binary Search Tree**, then **inorder traversal**:
+
+> `Left → Node → Right`
+
+**will always give a sorted output in ascending order**.
+
+### Example: BST
+Always show details
+
+Copy
+  20
+ /  \\
+10 30
+
+yaml
+Always show details
+
+Copy
+
+**Inorder Traversal**: `10 20 30` ✅ (Sorted)
+
+---
+
+
+## ❌ Inorder Traversal in Regular Binary Tree
+
+If the tree is **just a Binary Tree (not a BST)**, then inorder traversal **does NOT guarantee sorted output**, because there's no ordering constraint on node values.
+
+### Example: Regular Binary Tree
+Always show details
+
+Copy
+  5
+ / \\
+20 1
+
+yaml
+Always show details
+
+Copy
+
+**Inorder Traversal**: `20 5 1` ❌ (Not sorted)
+
+---
+
+
+## 🔑 Summary
+
+| Tree Type            | Inorder Output       | Sorted? |
+|----------------------|----------------------|---------|
+| Binary Search Tree   | Left → Node → Right  | ✅ Yes  |
+| Regular Binary Tree  | Left → Node → Right  | ❌ No   |
+"""
