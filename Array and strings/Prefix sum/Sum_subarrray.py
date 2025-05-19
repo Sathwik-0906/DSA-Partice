@@ -17,16 +17,7 @@ def sub_array(nums,queries,limit):
         ans.append(cur<limit)
     return ans
 
-def sub_arrays(nums,queries,limit):
-    prefix_sum=[0]*(len(nums)+1)
-    for i in range(len(nums)):
-        prefix_sum[i+1]=prefix_sum[i]+nums[i]
 
-    ans=[]
-    for x,y in queries:
-        cur = prefix_sum[y+1]-prefix_sum[x]
-        ans.append(cur<limit)
-    return ans
 def main():
     nums=[1, 6, 3, 2, 7, 2]
     queries = [[0, 3], [2, 5], [2, 4]]
