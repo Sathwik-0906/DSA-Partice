@@ -39,13 +39,3 @@ s1=Solution()
 
 
 
-from typing import List
-class Solutions:
-    def runningSum(self, nums: List[int]) -> List[int]:
-        n=len(nums)
-        prefix=[nums[0]]
-        for i in range(1,n):
-            prefix.append(nums[i]+prefix[-1])
-        return prefix
-s2=Solutions()
-
