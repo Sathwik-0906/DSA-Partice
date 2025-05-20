@@ -24,7 +24,7 @@
 
 # 1 <= nums.length <= 1000
 # -10^6 <= nums[i] <= 10^6
-
+# imp point is import the list
 from typing import List
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
