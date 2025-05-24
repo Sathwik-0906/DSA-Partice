@@ -7,8 +7,6 @@
 
 # Return the minimum positive value of startValue such that the step by step sum is never less than 1.
 
- 
-
 # Example 1:
 
 # Input: nums = [-3,2,-3,4,2]
@@ -30,7 +28,6 @@
 
 # Input: nums = [1,-2,-3]
 # Output: 5
- 
 
 # Constraints:
 
