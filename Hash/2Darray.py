@@ -13,8 +13,6 @@
 # Output: []
 # Explanation: 
 # There does not exist any integer present both in nums[0] and nums[1], so we return an empty list [].
-
-
 from collections import defaultdict
 class Solution:
     def intersection(self, nums: List[List[int]]) -> List[int]:
