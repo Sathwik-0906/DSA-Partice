@@ -20,7 +20,6 @@ Each node is labeled with a capital letter. We'll use this tree for all examples
 ---
 
 ## 🔁 Preorder Traversal (Node → Left → Right)
-
 ### 🧠 Algorithm
 
 1. Initialize stack with root.
